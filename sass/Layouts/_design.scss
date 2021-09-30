@@ -1,0 +1,51 @@
+.design{
+    @extend %section-padding;
+    .design_title{
+        @extend %heading-title;
+    }
+    .design_content{
+        .design_wrap{
+            padding: 0 $pd-30;
+            .design_item{
+                border-radius: $br-4;
+                padding: $pd-30;
+                border: 1px solid $color-e9e9e9;
+                .design_icon{
+                    width: 60px;
+                    height: 60px;
+                    text-align: center;
+                    background-color: $color-222;
+                    color: $color-fff;
+                    border-radius: $br-4;
+                    position: absolute;
+                    transform: translateY(-100%);
+                    i{
+                        line-height: 60px;
+                        font-size: parseRem($fs-30);
+                    }
+                }
+                h4{
+                    font-size: parseRem($fs-20 - 2);
+                    margin-top: $mg-30;
+                    margin-bottom: $mg-20;
+                    font-weight: $fw-normal;
+                }
+                p{
+                    color: $color-7e7e7e;
+                    letter-spacing: 0;
+                }
+                &:hover{
+                    .design_icon{
+                        background-color: $color-d6b161;
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive('large'){
+        .design_wrap{
+            margin-bottom: $mg-40;
+        }
+    }
+}

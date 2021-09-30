@@ -1,0 +1,36 @@
+.feedback{
+    @extend %section-padding;
+    background-image: url(../images/19.jpg);
+    @extend %bg-Img;
+    color: $color-fff;
+    .item{
+        margin-bottom: $mg-10;
+        img{
+            margin: 0 auto;
+            margin-bottom: $mg-50;
+        }
+        .feedback_item{
+            margin: 0 auto;
+            width: 60%;
+            text-align: center;
+            &>p{
+                font-size: $fs-15 + 1;
+                font-style: italic;
+                line-height: $lh-30;
+                margin-bottom: 0;
+            }
+            .author{
+                margin-top: $mg-10;
+                letter-spacing: $ls-1 + 1;
+                font-size: $fs-15 - 1;
+                text-transform: uppercase;
+                p{
+                    margin: 0;
+                    &:last-child{
+                        font-size: $fs-12;
+                    }
+                }
+            }
+        }
+    }
+}

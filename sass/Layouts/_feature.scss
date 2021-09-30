@@ -1,0 +1,38 @@
+.feature{
+    @extend %section-padding;
+    .feature_title{
+        @extend %heading-title;
+    }
+    .feature_content{
+        .row{
+            .feature_wrap{
+                padding: 0 $pd-30;
+                p{
+                    color: $color-7e7e7e;
+                    letter-spacing: 0;
+                }
+                .num{
+                    color: $color-e1e1e1;
+                    font-size: $fs-30 + 6;
+                }
+                h4{
+                    margin-bottom: $mg-20;
+                    font-size: $fs-20 - 2;
+                }
+            }
+        }
+        .feature_btn{
+            padding: $pd-30;
+        }
+    }
+    @media screen and (max-width:395px){
+        .feature_content{
+            .feature_btn{
+                padding: $pd-12 + 3;
+                a{
+                    margin-bottom: $mg-20;
+                }
+            }
+        }
+    }
+}

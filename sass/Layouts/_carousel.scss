@@ -1,0 +1,84 @@
+.carouselMassive {
+    .carousel {
+        // min-height: 590px;
+        .carousel-item {
+            .carousel-caption {
+                position: absolute;
+                display: inline-block;
+                width: 80%;
+                top: 40%;
+                left: 12%;
+                text-align: left;
+                color: $color-333;
+                h3 {
+                    text-transform: uppercase;
+                    font-size: $fs-15 + 3;
+                    letter-spacing: 2px;
+                }
+                h1 {
+                    text-transform: uppercase;
+                    margin-bottom: $mg-30;
+                }
+                p {
+                    color: $color-7e7e7e;
+                    line-height: $lh-30;
+                }
+            }
+            &:last-child {
+                .carousel-caption {
+                    color: $color-fff;
+                    p {
+                        color: $color-fff;
+                    }
+                }
+            }
+        }
+        .carousel-indicators {
+            li {
+                width: 10px;
+                height: 10px;
+                margin: 3px;
+                border-radius: 50%;
+                border: 1px solid $color-fff;
+                background-color: transparent;
+                &.active {
+                    width: 12px;
+                    height: 12px;
+                    background-color: $color-fff;
+                }
+            }
+        }
+        .carousel-control {
+            width: 30%;
+            margin-top: 180px;
+            margin-bottom: 120px;
+        }
+        .carousel-control-prev {
+            cursor: url(../images/arrow_left.png), auto;
+        }
+        .carousel-control-next {
+            cursor: url(../images/arrow_right.png), auto;
+        }
+    }
+
+    @include responsive("medium") {
+        .carousel {
+            .carousel-item {
+                .carousel-caption {
+                    top: 30%;
+                    h3{
+                        font-size: 2.5vw;
+                    }
+                    h1{
+                        font-size: 5vw;
+                        margin-bottom: $mg-10;
+                    }
+                    p{
+                        font-size: 2vw;
+                        line-height: 3vw;
+                    }
+                }
+            }
+        }
+    }
+}

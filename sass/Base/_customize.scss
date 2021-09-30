@@ -1,0 +1,17 @@
+.owl-theme {
+    .owl-dots {
+        .owl-dot {
+            span {
+                width: 12px;
+                height: 12px;
+                background-color: $color-7e7e7e;
+            }
+            &.active,
+            &:hover {
+                span {
+                    background-color: $color-eaeaea;
+                }
+            }
+        }
+    }
+}

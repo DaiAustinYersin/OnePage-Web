@@ -1,0 +1,45 @@
+footer{
+    padding: $pd-80 0;
+    background-color: $color-f5f5f5;
+    text-align: center;
+    .footer_top{
+        a{
+            display: block;
+            height: auto;
+        }
+        p{
+            margin: $mg-15 0;
+            letter-spacing: $ls-1 + 1;
+            font-size: $fs-12;
+        }
+    }
+    .footer_middle{
+        margin: $mg-80 0;
+        a{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            border: 1px solid $color-222;
+            text-align: center;
+            font-size: $fs-20;
+            margin: $mg-10;
+            &:hover{
+                background-color: $color-222;
+                color: $color-fff;
+            }
+        }
+    }
+    .footer_bottom{
+        letter-spacing: $ls-1 + 1;
+        p:first-child{
+            font-size: $fs-15 - 1;
+            margin: 0;
+        }
+        p:last-child{
+            font-size: $fs-12;
+            margin: 0;
+        }
+    }
+}

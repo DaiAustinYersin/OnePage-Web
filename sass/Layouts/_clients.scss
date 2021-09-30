@@ -1,0 +1,25 @@
+.clients{
+    @extend %section-padding;
+    .clients_title{
+        @extend %heading-title;
+    }
+    .clients_content{
+        #clients_carousel{
+            .item{
+                margin: $mg-20;
+            }
+        }
+    }
+    .owl-dots{
+        .owl-dot{
+            span{
+                background-color: $color-f2f2f2;
+            }
+            &.active{
+                span{
+                    background-color: $color-eaeaea;
+                }
+            }
+        }
+    }
+}

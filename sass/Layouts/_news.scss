@@ -1,0 +1,34 @@
+.news{
+    .row{
+        .news_item{
+            padding: $pd-100 $pd-60 $pd-50;
+            color: $color-fff;
+            line-height: 1.5;
+            h5{
+                font-size: $fs-15 + 1;
+            }
+            h3{
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: $mg-30;
+                font-size: $fs-25 - 1;
+                line-height: 1.5;
+                a{
+                    color: $color-fff;
+                }
+            }
+            p{
+                line-height: parseRem(30px);
+                letter-spacing: 0;
+            }
+        }
+        .news_item:first-child{
+            background-image: url(../images/p10.jpg);
+            background-size: cover;
+        }
+        .news_item:last-child{
+            background-image: url(../images/p11.jpg);
+            background-size: cover;
+        }
+    }
+}

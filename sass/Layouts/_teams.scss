@@ -1,0 +1,100 @@
+.teams{
+    @extend %section-padding;
+    background-color: $color-f5f5f5;
+    .team_title{
+        @extend %heading-title;
+    }
+    .row{
+        .team_item{
+            position: relative;
+            padding: 0 $pd-30;
+            .team_img{
+                position: relative;
+                img{
+                    width: 100%;
+                }
+                .team_intro{
+                    position: absolute;
+                    right: 0;
+                    bottom: 30px;
+                    width: 70%;
+                    padding: $pd-12 - 2 $pd-20;
+                    text-align: right;
+                    background-color: $color-tran-4;
+                    h5{
+                        color: $color-fff;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        font-size: $fs-15 - 1;
+                    }
+                    span{
+                        font-size: $fs-12;
+                        color: $color-tran-0;
+                        text-transform: uppercase;
+                    }
+                }
+                .team_hover{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    border: 20px solid $color-tran-2;
+                    background-color: $color-tran-5;
+                    transition: .3s;
+                    opacity: 0;
+                    overflow: hidden;
+                    .team_text{
+                        position: absolute;
+                        top: 0;
+                        padding: 0 $pd-20;
+                        text-align: center;
+                        transform: translateY(-55%);
+                        transition: .3s .2s;
+                        opacity: 0;
+                        h4{
+                            font-size: $fs-15 - 1;
+                            letter-spacing: 4px;
+                            margin-bottom: $mg-20 + 5;
+                        }
+                        p{
+                            margin-bottom: 0;
+                            color: $color-7e7e7e;
+                            line-height: $lh-30;
+                            font-size: $fs-15 - 1;
+                            letter-spacing: 0px;
+                        }
+                    }
+                    .team_socials{
+                        position: absolute;
+                        width: 100%;
+                        bottom: -20px;
+                        text-align: center;
+                        font-size: $fs-15;
+                        transition: .3s .2s;
+                        i{
+                            margin: 0 $mg-10;
+                            cursor: pointer;
+                            transition: .3s;
+                            &:hover{
+                                color: $color-d6b161;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    .team_hover{
+                        opacity: 1;
+                        .team_text{
+                            top: 35%;
+                            opacity: 1;
+                        }
+                        .team_socials{
+                            bottom: 7%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+header{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    .header_content{
+        height: 100px;
+        transition: height .3s;
+        .navbar{
+            height: 100%;
+            .navbar-brand{
+                height: 100%;
+                padding: $pd-5 - 3 0;
+                img{
+                    max-height: 100%;
+                }
+            }
+            .navbar-toggler{
+                font-size: $fs-25;
+                border: none;
+            }
+            #navbarMassive{
+                ul{
+                    li{
+                        margin-left: $mg-5 - 3;
+                        &.active{
+                            a{
+                                color: $color-d6b161;
+                            }
+                        }
+                        a{
+                            padding: 0 $pd-12;
+                            color: $color-333;
+                            font-size: $fs-12 + 1;
+                            &:hover{
+                                color: $color-d6b161;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &#header{
+        .header_content{
+            @include responsive('medium'){
+                display: none;
+            }
+        }
+    }
+}

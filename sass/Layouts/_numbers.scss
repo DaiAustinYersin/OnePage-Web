@@ -1,0 +1,32 @@
+.numbers {
+    @extend %section-padding;
+    background-image: url(../images/7.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    .numbers_content {
+        @extend %section-padding;
+        i {
+            font-size: $fs-30 + 6;
+        }
+        .numbers_item {
+            position: relative;
+            padding-left: $pd-60 - 3;
+            .counter {
+                font-size: $fs-30 + 6;
+                letter-spacing: $ls-1 + 1;
+                margin-bottom: 0;
+            }
+            &::before {
+                content: "";
+                width: 1px;
+                height: 80px;
+                background-color: $color-tran-6;
+                position: absolute;
+                top: -6px;
+                left: 33px;
+                transform: rotate(30deg);
+            }
+        }
+    }
+}

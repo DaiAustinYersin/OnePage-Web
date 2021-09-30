@@ -1,0 +1,21 @@
+.purchase{
+    padding: $pd-60 0;
+    background: $color-222;
+    color: $color-fff;
+    .purchase_infor{
+        h3{
+            margin-bottom: 0;
+            text-transform: uppercase;
+            span{
+                color: $color-d6b161;
+            }
+        }
+    }
+    @include responsive('medium'){
+        .purchase_infor{
+            h3{
+                font-size: 6vw;
+            }
+        }
+    }
+}

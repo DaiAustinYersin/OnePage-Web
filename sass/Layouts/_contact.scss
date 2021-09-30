@@ -1,0 +1,18 @@
+.contact{
+    @extend %section-padding;
+    background-image: url(../images/15.jpg);
+    @extend %bg-Img;
+    .contact_content{
+        text-align: center;
+        color: $color-fff;
+        i{
+            padding-bottom: $pd-30;
+            display: inline-block;
+            font-size: $fs-40 - 4;
+        }
+        h4{
+            margin-bottom: $mg-20;
+            font-size: $fs-20 - 2;
+        }
+    }
+}

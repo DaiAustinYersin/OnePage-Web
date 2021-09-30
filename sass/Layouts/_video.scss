@@ -1,0 +1,6 @@
+.video{
+    @extend %section-padding;
+    .video_title{
+        @extend %heading-title;
+    }
+}

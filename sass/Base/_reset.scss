@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    color: $color-323232;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: $fs-15;
+    font-weight: $fw-400;
+    line-height: 1.5;
+    letter-spacing: $ls-1 - .5;
+}
+::selection{
+    background-color: $color-d6b161;
+    color: $color-fff;
+}
+a{
+    color: $color-222;
+    text-decoration: none;
+    transition: .3s;
+    &:hover{
+        text-decoration: none;
+        color: $color-d6b161;
+    }
+}
+input,textarea{
+    border-radius: 0;
+    outline: none;
+    padding: $pd-12 - 2;
+}

@@ -1,0 +1,44 @@
+.message {
+    @extend %section-padding;
+    .message_title {
+        @extend %heading-title;
+    }
+    .message_content {
+        .form-control {
+            margin-bottom: $mg-15;
+            border-radius: 0;
+            border: 1px solid #e5e5e5;
+            box-shadow: none;
+            &::placeholder{
+                color: $color-a9a8a8;
+                letter-spacing: 0;
+                font-size: $fs-12 + 2;
+            }
+        }
+        .message_item:first-child {
+            padding-left: $pd-120;
+        }
+        .message_item:last-child{
+            padding-right: $pd-120;
+            textarea{
+                height: 90px;
+            }
+            a.btn{
+                display: block;
+                border-radius: 0;
+                padding: $pd-12 - 2 $pd-30;
+                font-size: 12px;
+            }
+        }
+    }
+    @include responsive('large'){
+        .message_content{
+            .message_item:first-child{
+                padding: 0;
+            }
+            .message_item:last-child{
+                padding: 0;
+            }
+        }
+    }
+}

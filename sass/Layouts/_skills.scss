@@ -1,0 +1,91 @@
+.skills{
+    background-image: url(../images/parallax.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    .skills_overlay{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: $color-tran-3;
+    }
+    .skills_content{
+        @extend %section-padding;
+        color: $color-fff;
+        .skills_wrap:first-child{
+            text-align: center;
+            display: table;
+            padding: 0 $pd-30;
+            h3{
+                display: table-cell;
+                vertical-align: middle;
+                letter-spacing: 6px;
+                font-size: $fs-25 - 1;
+            }
+        }
+        .skills_wrap:last-child{
+            padding: 0 $pd-60;
+            h4{
+                padding-bottom: $pd-30;
+                font-size: $fs-20 - 2;
+                letter-spacing: $ls-1 + 1;
+            }
+            p{
+                padding-bottom: $pd-30;
+                line-height: $lh-30;
+                letter-spacing: 0;
+            }
+            .skills_progressBar{
+                padding-top: $pd-30;
+                .progress{
+                    background-color: $color-606060;
+                    border-radius: 0;
+                    margin-top: $mg-10;
+                    margin-bottom: $mg-50;
+                    height: 20px;
+                    overflow: visible;
+                    .progress-bar{
+                        background: $color-fff;
+                        color: $color-222;
+                        text-align: left;
+                        padding-left: $pd-12 - 2;
+                        position: relative;
+                        overflow: visible;
+                        span{
+                            position: absolute;
+                            top: -28px;
+                            right: -5px;
+                            display: inline-block;
+                            min-width: 25px;
+                            height: 20px;
+                            line-height: 20px;
+                            padding: 0 $pd-5 + 3;
+                            text-align: center;
+                            letter-spacing: 0;
+                            color: $color-222;
+                            background-color: $color-a4a4a4;
+                            border-radius: $br-30;
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                left: 15px;
+                                bottom: -9px;
+                                width: 5px;
+                                height: 5px;
+                                @include arrow(5px,down,$color-a4a4a4);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:800px){
+        .skills_overlay{
+            display: none;
+        }
+    }
+}

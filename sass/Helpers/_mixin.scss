@@ -1,0 +1,46 @@
+@function parseRem($value){
+    $rem: $value / $fs-15;
+    @return #{$rem}rem;
+}
+
+@mixin arrow($size, $direction, $color) {
+    border: $size solid #000;
+    display: inline-block;
+    border-color: transparent;
+    @if $direction == up {
+        border-bottom-color: $color;
+    } @else if $direction == down {
+        border-top-color: $color;
+    } @else if $direction == right {
+        border-left-color: $color;
+    } @else if $direction == left {
+        border-right-color: $color;
+    } @else {
+        @error "Unknown direction: #{$direction}";
+    }
+}
+
+@mixin styleButton($color,$bg-color,$border-color,$fs,$fw,$py,$px) {
+    color: $color;
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    font-size: $fs;
+    font-weight: $fw;
+    padding: $py $px;
+}
+@mixin hoverButton($color,$bg-color,$border-color){
+    color: $color;
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+}
+
+@mixin responsive($screen) {
+    @if map-has-key($map:$breakpoints, $key:$screen){
+        $value: map-get($map:$breakpoints, $key:$screen);
+        @media screen and (max-width:$value){
+            @content;
+        }
+    } @else {
+        @warn "`{$screen}` doesn't exist in the breakpoints"
+    }
+}
